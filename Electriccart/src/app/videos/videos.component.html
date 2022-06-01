@@ -1,0 +1,89 @@
+<br>
+<div class="container" style="background-color:#1ea8a4;border-radius: 25px;width:1280px;padding: 30px;">
+  <h3>Video List</h3>
+  <br>
+<div class="row">
+  <form #VideosForm="ngForm" (ngSubmit)="onSubmit(VideosForm)">
+    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="VideosService.selectedVideos._id">
+    <div class="row">
+      <div class="input-field col s12">
+        <label id="label"><b>Name</b> :</label>
+        <input type="text" name="names" minlength="6" pattern="^[a-zA-Z\s]*$" maxlength="20" id="name" #name="ngModel" [(ngModel)]="VideosService.selectedVideos.names" placeholder="Enter the topic" names required ngModel #names="ngModel">
+        <br>
+        <span class="text-danger" id="span" *ngIf="names.touched && !names.valid" [ngClass] = "'error'">
+          <span class="text-danger" id="span" *ngIf="names.errors.required">Topic Required</span>
+        <span class="text-danger" id="span" *ngIf="names.errors?.minlength">Topic can be min 6 characters long</span>
+        <span class="text-danger" id="span" *ngIf="names.errors.pattern">Provide valid topic</span>
+        </span> 
+      </div>
+      <br>
+    </div>
+    <br>
+    <div class="row">
+      <div class="input-field col s12">
+        <label id="label"><b>Video</b> :</label>
+        <input type="text" name="video" id="Video" #name="ngModel" pattern="^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+" [(ngModel)]="VideosService.selectedVideos.video" placeholder="Enter the url here" video required ngModel #video="ngModel">
+        <br>
+        <span class="text-danger" id="span" *ngIf="video.touched && !video.valid" [ngClass] = "'error'">
+          <span class="text-danger" id="span" *ngIf="video.errors.required">Video Required</span>
+          <span class="text-danger" id="span" *ngIf="video.errors.pattern">Provide valid url</span>
+        </span> 
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="input-field col s12">
+        <label id="label"><b>Views</b> :</label>
+        <input type="text" name="views" minlength="2"  id="Video" pattern="\d+" #name="ngModel" [(ngModel)]="VideosService.selectedVideos.views" placeholder="Enter the views here" views required ngModel #views="ngModel">
+        <br>
+        <span class="text-danger" id="span" *ngIf="views.touched && !views.valid" [ngClass] = "'error'">
+          <span class="text-danger" id="span" *ngIf="views.errors.required">Views Required</span>
+        <span class="text-danger" id="span" *ngIf="views.errors?.minlength">Views can be min 2 characters long</span>
+        <span class="text-danger" id="span" *ngIf="views.errors.pattern">Provide only number</span>
+        </span> 
+      </div>
+    </div>
+    <br>
+    <div class="row">
+          <div class="input-field col s12">
+                <button class="btn btn-custom right" type="button" (click)="resetForm(VideosForm)"><b>Reset</b></button>
+                <button class="btn btn-custom right" type="submit" [disabled]="!VideosForm.valid"><b>Upload</b></button>
+          </div>
+    </div> 
+  </form>  
+</div>  
+<br>
+<br>
+<div class="row">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Names</th>
+        <th>Video</th>
+        <th>Views</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let data of VideosService.videos">
+      <td>{{data.names}}</td>
+      <td>{{data.video}}</td>
+      <td>{{data.views}}</td>
+      <td>
+        <a class="action-btn" (click)="onEdit(data)">
+          <i class="fa fa-pencil">edit</i>
+        </a>
+        <a class="action-btn"(click)="onDelete(data._id,VideosForm)" >
+          
+          <i class="fa fa-trash-o">delete</i>
+        </a>
+      </td>
+    </tr>
+   </table> 
+</div>
+</div>
+<br>
+<div class="row" style="margin-left:422px;">
+    <div class="col">
+          <app-footer></app-footer>
+    </div>
+</div>

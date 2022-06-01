@@ -1,0 +1,23 @@
+#label {
+    margin:12px;
+    margin-right:23px;
+    height:12px;
+    padding-bottom:5px;
+}
+
+#name {
+    width:562px;
+    border-radius:4px;
+}
+
+#Video {
+
+    width:562px;
+    border-radius:4px;
+}
+input.ng-invalid.ng-touched {
+    border-color:red;
+}
+#span {
+    margin-left:52px;
+}

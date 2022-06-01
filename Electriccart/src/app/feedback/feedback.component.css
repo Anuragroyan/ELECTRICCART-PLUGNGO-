@@ -1,0 +1,29 @@
+#label {
+     margin:12px;
+     margin-right:63px;
+     height:12px;
+     padding-bottom:12px;
+}
+
+#Name { 
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#emailid {
+
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#feedback {
+    margin:-6px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+input.ng-invalid.ng-touched {
+    border-color:red;
+}

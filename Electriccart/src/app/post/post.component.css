@@ -1,0 +1,70 @@
+#label {
+    margin:12px;
+    margin-right:63px;
+    height:12px;
+    padding-bottom:12px;
+}
+
+#topic {
+
+    margin-left:-4px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#date {
+
+    margin-left:-4px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#by {
+
+    margin-left:8px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#from {
+
+    margin-left:-6px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#content {
+
+    margin-left:-17px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#comment {
+
+    margin-left:-21px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#like {
+
+    margin-left:14px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#unlike {
+
+    margin-left:-5px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}

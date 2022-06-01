@@ -1,0 +1,30 @@
+<br>
+<div class="card mb-4 shadow-sm" style="background-color: rgb(223, 206, 206);">
+ <div class="col-md-12" *ngFor="let data of carList">
+ <br>        
+<h3><span>{{data.name}}</span></h3>
+<br>
+<img width="600" height="300" alt="thumbnail" [src]="data.imageUrl">
+<br>
+<br>
+<h3 style="font-size:23px;float:right;margin-right:63px;margin-top:-254px;"><span>Battery: {{data.battery}}</span></h3>
+<br>
+<h3 style="font-size:23px;float:right;margin-right:64px;margin-top:-242px;"><span>Top Speed: {{data.speed}}</span></h3>
+<br>
+<h3 style="font-size:23px;float:right;margin-top:-232px;margin-right:112px;"><span>Engine: {{data.engine}}</span></h3>
+<br>
+<h3 style="font-size:23px;float:right;margin-right:143px;margin-top:-227px;"><span>Torque: {{data.torque}}</span></h3>
+<br>
+<h3 style="font-size:23px;float:right;margin-right:213px;margin-top:-217px;"><span>Warranty: {{data.warranty}}</span></h3>
+<br>
+<h3 style="font-size:23px;margin-top:-92px;"><span>Features: {{data.feature}}</span></h3>
+<br>
+<h3 style="font-size:23px;"><span>Price: {{data.price | currency:'INR'}}</span></h3>
+<hr>
+</div>
+</div>
+<br>
+<div class="container" style="text-align:center;">
+        <app-footer></app-footer>
+</div>        
+

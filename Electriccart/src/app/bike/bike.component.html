@@ -1,0 +1,19 @@
+<br>
+<div class="row" style="background-color:rgb(223, 206, 206);">
+  <div class="col-md-4" *ngFor="let data of bikeList">
+   <br>
+   <img width="300" height="300" alt="thumbnail" [src]="data.imageUrl">
+   <br>
+   <br>
+   <h3 style="font-size:24px;"><span>Bike: {{data.name}}</span></h3>
+   <br>
+   <h3 style="font-size:24px;"><span>Speed: {{data.speed}}</span></h3>
+   <br>
+   <h3 style="font-size:24px;"><span>Price: {{data.price | currency:'INR'}}</span></h3>
+  </div>
+</div>
+ <br>
+<div class="container" style="text-align:center;">
+        <app-footer></app-footer>
+</div>        
+      

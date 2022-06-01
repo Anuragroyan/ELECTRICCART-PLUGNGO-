@@ -1,0 +1,45 @@
+#label {
+    margin:12px;
+    margin-right:63px;
+    height:12px;
+    padding-bottom:12px;
+}
+
+#fname {
+    margin-left:-5px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#lname {
+    margin-left:7px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#emailid {
+    margin-left:21px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#password {
+    margin-left:13px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+#contact {
+    margin-left:5px;
+    width:734px;
+    border-radius: 4px;
+    padding-bottom:12px;
+}
+
+input.ng-invalid.ng-touched {
+    border-color:red;
+}

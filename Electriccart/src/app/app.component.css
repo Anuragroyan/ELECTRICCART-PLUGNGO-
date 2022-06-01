@@ -1,0 +1,30 @@
+h1 {
+  text-align:center;
+  color:#1f0214f5;
+   font-size: 54px;
+   margin-top:-57px;
+}
+.jumbotron{
+    background-color:#5f6666d0;
+    height:-12px;
+    border-radius:0px;
+  
+}
+#nav {
+    background-color:#0f1111e1;
+    margin-top:-32px;
+    height:42px;
+}
+#card {
+    margin-top:-18px;
+}
+#foot {
+    background-color:#28a79c77;
+    width:1270px;
+    text-align:center;
+    height:35px;
+    margin:-12px;
+}
+#jumbo {
+   padding-bottom:12px;
+}

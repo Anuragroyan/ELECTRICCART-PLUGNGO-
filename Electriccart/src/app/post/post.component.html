@@ -1,0 +1,190 @@
+<br>
+<div class="container">
+  <mat-card class="example-card"style="background-color:#e6e3c5;border-radius: 25px;padding:30px;">
+    <mat-card-content>
+  <div *ngFor="let data of PostService.posts">
+    <br>
+    <h3 id="1" [ngStyle]="{'color':'darkgreen','font-size':'32px','font-style':'italic'}"><span>Topic:   {{data.topic}}</span></h3>
+    <h5 id="2"><span>{{data.date}}</span></h5>
+    <br>
+    <h5 id="3"><span>By: {{data.By}}</span></h5>
+    <br>
+    <h5 id="3" [ngStyle]="{'margin-top':'-55px','margin-left':'756px'}"><span>Comment: {{data.comment}}</span></h5>
+    <br>
+    <h5 id="4" [ngStyle]="{'margin-top':'-29px'}"><span>From: {{data.place}}</span></h5>
+    <br>
+    <p id="5"><span>{{data.content}}</span></p>
+    <br>
+    <span [ngStyle]="{'margin-top':'-39px'}">LIKE: {{data.like}}</span>
+    <span  [ngStyle]="{'margin':'75px','border-radius':'5px'}">UNLIKE: {{data.dislike}} </span>
+    <br>
+</div>
+<br>
+</mat-card-content>
+</mat-card>
+ </div>
+ <br>
+<div class="row">
+    <div class="col s12" >
+      <div class="card" style="background-color:#1ea8a4; padding:20px;">
+        <div class="card-content white-text">
+          <h3 style="text-align:center;">Post Here</h3>
+          <br>
+          <div class="row"  style="text-align:center;">
+            <div class="col s5">
+                <form #PostForm="ngForm" (ngSubmit)="onSubmit(PostForm)" >
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="PostService.selectedPost._id">
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label id="label"><b>Topic</b> :
+                          </label>
+                        <input type="text" maxlength="256" minlength="8" id="topic" name="topic"  #name="ngModel" [(ngModel)]="PostService.selectedPost.topic" placeholder="Enter the topic" topic required ngModel #topic="ngModel">
+                        <br>
+                        <span class="text-danger" *ngIf="topic.touched && !topic.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="topic.errors.required">Topic Required</span>
+                        <span class="text-danger" *ngIf="topic.errors?.minlength">Topic can be min 8 characters long</span>
+                        </span> 
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label id="label"><b>Date</b> :</label>
+                        <input type="datetime" name="date" id="date" #name="ngModel" [(ngModel)]="PostService.selectedPost.date" placeholder="Enter the date" date required ngModel #date="ngModel">
+                        <br>
+                        <span class="text-danger" *ngIf="date.touched && !date.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="date.errors.required">date Required</span>
+                          </span>
+                       </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label id="label"><b>By</b> :</label>
+                        <input type="text" name="By"  id="by" minlength="6" pattern="^[a-zA-Z\s]*$"  maxlength="20" #name="ngModel" [(ngModel)]="PostService.selectedPost.By" placeholder="Enter the name" By required ngModel #By="ngModel">
+                        <br>
+                        <span class="text-danger" *ngIf="By.touched && !By.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="By.errors.required">name Required</span>
+                        <span class="text-danger" *ngIf="By.errors?.minlength">name can be min 6 characters long</span>
+                        <span class="text-danger" *ngIf="By.errors.pattern">Provide valid name</span>
+                        </span> 
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label id="label"><b>From</b> :</label>
+                        <input type="text" name="place" minlength="6"  id="from" pattern="^[a-zA-Z]*$" #name="ngModel" [(ngModel)]="PostService.selectedPost.place" placeholder="enter the place" place required ngModel #place="ngModel" >
+                        <br>
+                        <span class="text-danger" *ngIf="place.touched && !place.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="place.errors.required">Place Required</span>
+                        <span class="text-danger" *ngIf="place.errors?.minlength">Place can be min 6 characters long</span>
+                        <span class="text-danger" *ngIf="place.errors.pattern">Provide valid from</span>
+                        </span> 
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label id="label"><b>Content</b> :</label>
+                          <input type="text" name="content" id="content" minlength="6"  #name="ngModel" [(ngModel)]="PostService.selectedPost.content" placeholder="Please enter Content" content required ngModel #content="ngModel">
+                          <br>
+                          <span class="text-danger" *ngIf="content.touched && !content.valid" [ngClass] = "'error'">
+                            <span class="text-danger" *ngIf="content.errors.required">Content Required</span>
+                          <span class="text-danger" *ngIf="content.errors?.minlength">Content can be min 6 characters long</span>
+                          </span> 
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="input-field col s12">
+                          <label id="label"><b>Comment</b> :</label>
+                        <input type="text" name="comment" id="comment" maxlength="255" #name="ngModel" [(ngModel)]="PostService.selectedPost.comment" placeholder="Please enter Comment" comment required ngModel #comment="ngModel">
+                        <br>
+                        <span class="text-danger" *ngIf="comment.touched && !comment.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="comment.errors.required">Comment Required</span>
+                        </span> 
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="input-field col s12">
+                        <label id="label"><b>Like</b> :</label>
+                      <input type="text" name="like" id="like" minlength="1" pattern="\d+" maxlength="2" #name="ngModel" [(ngModel)]="PostService.selectedPost.like" placeholder="Please enter like" like required ngModel #like="ngModel">
+                      <br>
+                      <span class="text-danger" *ngIf="like.touched && !like.valid" [ngClass] = "'error'">
+                        <span class="text-danger" *ngIf="like.errors.required">Like Required</span>
+                      <span class="text-danger" *ngIf="like.errors?.minlength">Like can be min 1 digit long</span>
+                      <span class="text-danger" *ngIf="like.errors.pattern">Like field input is number</span>
+                      </span> 
+                    </div>
+                </div>
+                <br>
+                    <div class="row">
+                      <div class="input-field col s12">
+                          <label id="label"><b>Dislike</b> :</label>
+                        <input type="text" name="dislike" id="unlike" pattern="\d+" minlength="1" maxlength="2" maxlength="140" #name="ngModel" [(ngModel)]="PostService.selectedPost.dislike" placeholder="Please enter dislike" dislike required ngModel #dislike="ngModel">
+                        <br>
+                        <span class="text-danger" *ngIf="dislike.touched && !dislike.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="dislike.errors.required">dislike Required</span>
+                        <span class="text-danger" *ngIf="dislike.errors?.minlength">dislike can be min 1 digit long</span>
+                        <span class="text-danger" *ngIf="dislike.errors.pattern">Dislike field input is number</span>
+                        </span> 
+                      </div>
+                  </div>
+                      <div class="row">
+                      <div class="input-field col s12">
+                        <button class="btn btn-custom right" type="button" (click)="resetForm(PostForm)"><b>Reset</b></button>
+                        <button class="btn btn-custom right" type="submit" [disabled]="!PostForm.valid"><b>Submit</b></button>
+                      </div>
+                    </div> 
+                      </form>
+               </div>
+            </div>
+         </div>
+   </div>
+ </div>
+ </div>
+ <br>
+ <div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Date</th>
+        <th>By</th>
+        <th>Comment</th>
+        <th>From</th>
+        <th>Content</th>
+        <th>Like</th>
+        <th>Unlike</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let data of PostService.posts">
+      <td>{{data.topic}}</td>
+      <td>{{data.date}}</td>
+      <td>{{data.By}}</td>
+      <td>{{data.comment}}</td>
+      <td>{{data.place}}</td>
+      <td>{{data.content}}</td>
+      <td>{{data.like}}</td>
+      <td>{{data.dislike}}</td>
+      <td>
+        <a class="action-btn" (click)="onEdit(data)">
+          <i class="fa fa-pencil">edit</i>
+        </a>
+        <a class="action-btn"(click)="onDelete(data._id,PostForm)" >
+          
+          <i class="fa fa-trash-o">delete</i>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+<br>
+ <div class="container" style="text-align:center;">
+        <app-footer></app-footer>
+    </div>
+
+

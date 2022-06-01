@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col s12" >
+      <div class="card" style="background-color:#1ea8a4; padding:20px;">
+        <div class="card-content white-text">
+          <h3 style="text-align:center;">Feedback Form</h3>
+          <br>
+          <div class="row">
+            <div class="col s5" style="text-align:center;">
+                <form #FeedbackForm="ngForm" (ngSubmit)="onSubmit(FeedbackForm)" >
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="feedbackService.selectedFeedback._id">
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label id="label"><b>Name</b> :
+                          </label>
+                        <input type="text" id="Name" name="Names" pattern="^[a-zA-Z\s]*$" minlength="6" maxlength="20" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.Names" placeholder="Enter the  Name" Names required ngModel #Names="ngModel">
+                        <br>
+                        <span class="text-danger" *ngIf="Names.touched && !Names.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="Names.errors.required">Names Required</span>
+                        <span class="text-danger" *ngIf="Names.errors?.minlength">Names can be min 6 characters long</span>
+                        <span class="text-danger" *ngIf="Names.errors.pattern">Provide valid name</span>
+                        </span> 
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label id="label"><b>Email_id</b> :</label>
+                        <input type="text" id="emailid" name="email_id" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.email_id" placeholder="Enter the email_id" email_id required ngModel #email_id="ngModel">
+                        <br>
+                        <span class="text-danger" *ngIf="email_id.touched && !email_id.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="email_id.errors.required">email_id Required</span>
+                        <span class="text-danger" *ngIf="email_id.errors.pattern">Please provide a valid email_id</span>
+                        </span> 
+                       </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label id="label"><b>Feedback</b> :</label>
+                        <input type="text" name="feedback" id="feedback" pattern="^[a-zA-Z]*$" minlength="2" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.feedback" placeholder="Enter the feedback" feedback required ngModel #feedback="ngModel">
+                        <br>
+                        <span class="text-danger" *ngIf="feedback.touched && !feedback.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="feedback.errors.required">Feedback Req</span>
+                        <span class="text-danger" *ngIf="feedback.errors?.minlength">Feedback can be min 2 characters long</span>
+                        <span class="text-danger" *ngIf="feedback.errors.pattern">Provide valid Feedback</span>
+                        </span>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                          <button class="btn btn-custom right" type="button" (click)="resetForm(FeedbackForm)"><b>Reset</b></button>
+                          <button class="btn btn-custom right" type="submit" [disabled]="!FeedbackForm.valid"><b>Submit</b></button>
+                        </div>
+                    </div>    
+                 </form>
+              </div>
+            </div>
+          </div>     
+        </div>
+      </div>
+    </div>         

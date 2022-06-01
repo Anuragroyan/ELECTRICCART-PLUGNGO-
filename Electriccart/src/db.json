@@ -1,0 +1,313 @@
+{
+  "products": [
+    {
+       "id":1,
+       "name":"Hero Electric Dash",
+       "description":" Mileage  (50-60Km) and top speed ,1.34 kW Lithium Ion Battery ,77 kg Kerb Weight Charging Time 4 hrs",
+       "imageUrl":"./assets/images/electric1.jpg",
+       "price":60000
+    },
+    {
+      "id":2,
+      "name":"Hero Electric Optima",
+      "description":" Mileage  (50-65Km) and top speed 25-30Kmph ,1.34 kW Lithium Ion Battery,68 kg Kerb Weight Charging Time 4 hrs ",
+      "imageUrl":"./assets/images/R.jpg",
+      "price":59000
+   },
+   {
+    "id":3,
+    "name":"Ampere Rio",
+    "description":" Mileage  (50-65Km) and top speed 25-30Kmph 1.15 kW Lithium Ion Battery 70 kg Kerb Weight Charging Time 5-6 hrs ",
+    "imageUrl":"./assets/images/electric2.jpg",
+    "price":10990
+ },
+ {
+  "id":4,
+  "name":"Ather 450X(Pro)",
+  "description":"2.90 kWh Lithium Ion Battery, 80 kmph Top Speed ,6 kW Peak Power26 Nm Max Torque",
+  "imageUrl":"./assets/images/battery1.jpg",
+  "price":159000
+},
+{
+  "id":5,
+  "name":"Bajaj Chetak Electric",
+  "description":"3.00 kWh Lithium Ion Battery,60 kmph Top Speed,4.08 kW Max Power,16 NM torque",
+  "imageUrl":"./assets/images/battery2.jpg",
+  "price":119350
+},
+{
+  "id":6,
+  "name":"PureEV ePluto7G",
+  "description":"2.50 kWh Lithium Ion Battery,63 kmph Top Speed ,2 kW Max Power,12 Degree Climbing",
+  "imageUrl":"./assets/images/batter3.jpg",
+  "price":85000
+},
+{
+  "id":7,
+  "name":"Fury 518 ",
+  "description":"Battery : 36V * 10.4Ah Throttle Available : YES ,Pedal Assist Sensors : 12 magnet ,Pedal Assist Levels : 5 Physical Gears Available : Single Speed / 7 Speed",
+  "imageUrl":"./assets/images/cycle1.jpg",
+  "price":56999
+},
+{
+  "id":8,
+  "name":"Hero Lectro e-Bikes",
+  "description":"Battery : 36V * 5Ah/10.9Ah Throttle Available : YES/NO ,Pedal Assist Sensors : 8/12 magnet,Pedal Assist Levels : 3 ,Physical Gears Available :  7 Speed ",
+  "imageUrl":"./assets/images/cycles2.jpg",
+  "price":135999
+},
+{
+  "id":9,
+  "name":"Hulikkal e-Bikes",
+  "description":"Battery:250 Watt Hrs ,Pedal Assist Sensors : 12 magnet ,Pedal Assist Levels : NA ,Physical Gears :  7 Speed",
+  "imageUrl":"./assets/images/cycle3.png",
+  "price":34900
+},
+{
+  "id":10,
+  "name":"Tata Nexon Electric Compact",
+  "description":"30.20 kWh Li-Ion Battery 120 kmph Top Speed,94.87 kW Peak Power - 320 Volt system,245 Nm Torque",
+  "imageUrl":"./assets/images/car1.jpg",
+  "price":1399999
+},
+{
+  "id":11,
+  "name":"MG Motors ZS EV Electric SUV",
+  "description":"44.50 kWh Li-Ion Battery 155 kmph Top Speed ,104 kW Peak Power,353 Nm Torque",
+  "imageUrl":"./assets/images/car2.jpg",
+  "price":2088000
+},
+{
+  "id":12,
+  "name":"Hyundai Kona Electric SUV",
+  "description":"39.20 kWh Li-Polymer Battery 155 kmph Top Speed 100 kW Peak Power ,395 Nm Torque",
+  "imageUrl":"./assets/images/car3.jpg",
+  "price":2371000
+},
+{
+  "id":13,
+  "name":"Revolt RV 400",
+  "description":"3.24 kWh Lithium Ion Battery 80 kmph Top Speed 5 kW Max Power : Mid Drive Motor 170 Nm torque Variants : RV 300",
+ "imageUrl":"./assets/images/bik1.jpg",
+  "price":98999
+},
+{
+  "id":14,
+  "name":"Tork T6X",
+  "description":"100 to 150 km TBC (coming soon)",
+  "imageUrl":"./assets/images/bik2.jpg",
+  "price":124999
+},
+{
+  "id":15,
+  "name":"Ultraviolet Z77",
+  "description":"100 to 150 km TBC (coming soon",
+  "imageUrl":"./assets/images/bik3.jpg",
+  "price":299999
+},
+{
+  "id":16,
+  "name":"Mahindra eSupro Cargo ​Van",
+  "description":"600 Kg Payload capacity 60 kmph Top Speed 25 kW @ 3000 RPM Power Lithium based battery",
+  "imageUrl":"./assets/images/van1.png",
+  "price":1081185
+},
+{
+  "id":17,
+  "name":"Kinetic Green Safar Shakti Star",
+  "description":"400 Kg Payload capacity 3.6 kWh Lithium Ion battery 25 kmph Top Speed 6.5 kW @ Peak Power",
+  "imageUrl":"./assets/images/van2.jpg",
+  "price":213400
+},
+{
+  "id":18,
+  "name":"Gayam Motors Taskman – Cargo",
+  "description":"500 Kg Payload capacity 4.8 kWh Lithium Ion Battery 55 kmph Top Speed 4.5 kW Power",
+  "imageUrl":"./assets/images/van3.png",
+  "price":325185
+}
+  ],
+   "car": [
+    {
+       "id":1,
+       "name":"Tata Nexon Electric Compact SUV",
+       "battery": "30.20 kWh Li-Ion Battery",
+       "speed": "120 kmph Top Speed",
+       "engine": "94.87 kW Peak Power",
+       "torque": "245 Nm Torque",
+       "warranty":"10 yrs",
+       "feature":"Track Your Car in One Click Navigate Your Way,Get Your Car Diagnosed,Locate Nearest Charging Station",
+       "imageUrl":"./assets/images/car1.jpg",
+       "price":1399999
+     
+    },
+    {
+      "id":2,
+      "name":"MG Motors ZS EV Electric SUV",
+      "battery": "44.50 kWh Li-Ion Battery",
+      "speed": "155 kmph Top Speed",
+      "engine": "104 kW Peak Power",
+      "torque": "353 Nm Torque",
+      "warranty":"9 yrs",
+      "feature":"Battery & Range Status,Vehicle Charging Status,Dynamic Range Estimation,Remote Tyre Pressure Check,CO2 reduction updates,Driver Analytics,Charging Station Search,Remote AC ON/OFF,Remote Door Unlock/Lock,Remote Light & Horn",
+      "imageUrl":"./assets/images/car2.jpg",
+      "price":2088000
+    
+   },
+   {
+    "id":3,
+    "name":"Hyundai Kona Electric SUV",
+    "battery": "30.20 kWh Li-Ion Battery",
+    "speed": "120 kmph Top Speed",
+    "engine": "94.87 kW Power 320 Volt ",
+    "torque": "245 Nm Torque",
+    "warranty":"10 yrs",
+    "feature":"Track Your Car in One Click Navigate Your Way,Get Your Car Diagnosed,Locate Nearest Charging Station",
+    "imageUrl":"./assets/images/car3.jpg",
+    "price":2371000
+  
+ }
+      ],
+    "scooty": [
+        {
+           "id":1,
+           "name":"Hero Electric Dash",
+           "price":60000,
+           "battery":"1.34 kW Lithium Ion Battery",
+           "speed":"30 kmph Top Speed",
+           "weight":"77 kg Kerb Weight",
+           "chargingtime":"4 hrs ",
+           "imageUrl":"./assets/images/electric1.jpg"        
+        },
+        {
+          "id":2,
+          "name":"Hero Electric Optima",
+          "price":59000,
+          "battery":"1.34 kW Lithium Ion Battery",
+          "speed":"25-30 kmph Top Speed",
+          "weight":"68 kg Kerb Weight",
+          "chargingtime":"4 hrs ",
+          "imageUrl":"./assets/images/electric2.jpg"        
+       },
+       {
+        "id":3,
+        "name":"Ampere Rio",
+        "price":10900,
+        "battery":"1.15 kW Lithium Ion Battery",
+        "speed":"25-30 kmph Top Speed",
+        "weight":"70 kg Kerb Weight",
+        "chargingtime":"5-6 hrs ",
+        "imageUrl":"./assets/images/electric3.jpg"        
+     }
+          ],
+    "bike": [
+       {
+          "id":1,
+          "name":"Tork T6X",
+          "speed":"100 to 150 km TBC",
+          "imageUrl":"./assets/images/bik1.jpg",
+          "price": 124999       
+       },
+       {
+        "id":2,
+        "name":"Revolt RV 400",
+        "speed":"80 kmph Top Speed",
+        "imageUrl":"./assets/images/bik2.jpg",
+        "price": 98999       
+     },
+     {
+      "id":3,
+      "name":"Ultraviolet Z77",
+      "speed":"100 to 150 km TBC",
+      "imageUrl":"./assets/images/bik3.jpg",
+      "price": 299999      
+   }
+           ],
+    "cycle": [
+      {
+        "id":1,
+        "name":"Fury 518",
+        "battery":"36V * 10.4Ah",
+        "throttle":"YES",
+        "pedal":"12 magnet",
+        "gear":"7 Speed",
+        "imageUrl":"./assets/images/cycle1.jpg",
+        "price":56999
+
+      },
+      {
+        "id":2,
+        "name":"Hero Lectro e-Bikes",
+        "battery":"36V * 5Ah/10.9Ah",
+        "throttle":"YES/NO",
+        "pedal":"8/12 magnet",
+        "gear":" 7 Speed ",
+        "imageUrl":"./assets/images/cycles2.jpg",
+        "price":135000
+
+      },
+      {
+        "id":3,
+        "name":"Hulikkal e-Bikes",
+        "battery":"250 Watt Hrs",
+        "throttle":"YES",
+        "pedal":"12 magnet",
+        "gear":"7 Speed",
+        "imageUrl":"./assets/images/cycle3.png",
+        "price":34900 
+
+      }
+    ],
+    "cargo": [
+      {  
+        "id":1,
+        "name":"Mahindra eSupro Cargo ​Van",
+        "battery":"3.5 kW @ Peak Power",
+        "engine":"25 kW @ 3000 RPM Power",
+        "capacity":"600 Kg Payload capacity",
+        "speed":"60 kmph Top Speed",
+        "imageUrl":"./assets/images/van1.png",
+        "price":1081185
+
+      },
+      {  
+        "id":2,
+        "name":"Kinetic Green Safar Shakti Star",
+        "battery":"3.6 kWh Lithium Ion battery",
+        "engine":"6.5 kW @ Peak Power",
+        "capacity":"400 Kg Payload capacity",
+        "speed":"​25 kmph Top Speed",
+        "imageUrl":"./assets/images/van2.jpg",
+        "price":213400
+
+      },
+      {  
+        "id":3,
+        "name":"Gayam Motors Taskman – Cargo",
+        "battery":"4.8 kWh Lithium Ion Battery",
+        "engine":"4.5 kW Power",
+        "capacity":"500 Kg Payload capacity",
+        "speed":"55 kmph Top Speed",
+        "imageUrl":"./assets/images/van3.png",
+        "price": 325185
+
+      }
+    ],    
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

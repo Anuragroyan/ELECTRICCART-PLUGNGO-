@@ -1,0 +1,122 @@
+<br>
+<div class="row">
+    <div class="col s12" >
+      <div class="card" style="background-color: #1ea8a4; padding:20px;">
+        <div class="card-content white-text">
+          <h3 style="text-align:center;">Register Form</h3>
+          <br>
+          <div class="row" style="text-align:center;">
+            <div class="col s5">
+                <form #RegisterForm="ngForm" (ngSubmit)="onSubmit(RegisterForm)" >
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="registerService.selectedRegister._id">
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label id="label"><b>First_Name</b> :
+                          </label>
+                          <input type="text" name="first_name" id="fname"  minlength="4" maxlength="10" pattern="^[a-zA-Z]*$" #name="ngModel" [(ngModel)]="registerService.selectedRegister.first_name" placeholder="Enter full First Name" first_name required ngModel #first_name="ngModel">
+                         <br>
+                          <span class="text-danger" *ngIf="first_name.touched && !first_name.valid" [ngClass] = "'error'">
+                            <span class="text-danger" *ngIf="first_name.errors.required">Fname Required</span>
+                          <span class="text-danger" *ngIf="first_name.errors?.minlength">First_Name can be min 4 characters long</span>
+                          <span class="text-danger" *ngIf="first_name.errors.pattern">Provide valid fname</span>
+                          </span> 
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label id="label"><b>Last_Name</b> :</label>
+                        <input type="text" name="last_name" id="lname" minlength="3" pattern="^[a-zA-Z]*$" maxlength="8" #name="ngModel" [(ngModel)]="registerService.selectedRegister.last_name" placeholder="Enter the last name" last_name required ngModel #last_name="ngModel">
+                        <br>
+                        <span class="text-danger" *ngIf="last_name.touched && !last_name.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="last_name.errors.required">Lname Required</span>
+                        <span class="text-danger" *ngIf="last_name.errors?.minlength">last_Name can be min 3 characters long</span>
+                        <span class="text-danger" *ngIf="last_name.errors.pattern">Provide valid lname</span>
+                        </span> 
+                       </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label id="label"><b>Email_id</b> :</label>
+                        <input type="text" name="email_id" id="emailid" #name="ngModel"  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="registerService.selectedRegister.email_id" placeholder="Enter the email id" emailid required ngModel #emailid="ngModel">
+                        <br>
+                        <span class="text-danger" *ngIf="emailid.touched && !emailid.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="emailid.errors.required">email_id Required</span>
+                        <span class="text-danger" *ngIf="emailid.errors.pattern">Please provide a valid email_id</span>
+                        </span> 
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label id="label"><b>Contact no</b> :</label>
+                        <input type="text" name="contact" id="contact" pattern="^[6-9]\d{9}$" maxlength="10" #name="ngModel" [(ngModel)]="registerService.selectedRegister.contact" placeholder="Please enter the contact" contact required ngModel #contact="ngModel">
+                        <br>
+                        <span class="text-danger" *ngIf="contact.touched && !contact.valid" [ngClass] = "'error'">
+                          <span class="text-danger" *ngIf="contact.errors.required">Mobile Required</span>
+                        <span class="text-danger" *ngIf="contact.errors.pattern">Mobile no must be 10 digits</span>
+                        </span> 
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label id="label"><b>Password</b> :</label>
+                          <input type="password" name="password" id="password"  minlength="4" maxlength="8" #name="ngModel" [(ngModel)]="registerService.selectedRegister.password" placeholder="Please enter  password" password required ngModel #password="ngModel">
+                          <br>
+                          <span class="text-danger" *ngIf="password.touched && !password.valid" [ngClass] = "'error'">
+                            <span class="text-danger" *ngIf="password.errors.required">Password Required</span>
+                          <span class="text-danger" *ngIf="password.errors?.minlength">Password can be min 4 characters or digits long</span>
+                          </span> 
+                        </div>
+                    </div>
+                    <br>
+                      <div class="row">
+                      <div class="input-field col s12">
+                        <button class="btn btn-custom right" type="button" (click)="resetForm(RegisterForm)"><b>Reset</b></button>
+                        <button class="btn btn-custom right" type="submit" [disabled]="!RegisterForm.valid"><b>Submit</b></button>
+                      </div>
+                    </div> 
+                      </form>
+               </div>
+            </div>
+         </div>
+   </div>
+ </div>
+ </div>
+ <br>
+ <div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>First_Name</th>
+        <th>Last_Name</th>
+        <th>email_id</th>
+        <th>Contact</th>
+        <th>Password</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let data of registerService.registers">
+      <td>{{data.first_name}}</td>
+      <td>{{data.last_name}}</td>
+      <td>{{data.email_id}}</td>
+      <td>{{data.contact}}</td>
+      <td>{{data.password}}</td>
+      <td>
+        <a class="action-btn" (click)="onEdit(data)">
+          <i class="fa fa-pencil">edit</i>
+        </a>
+        <a class="action-btn"(click)="onDelete(data._id,RegisterForm)" >
+          
+          <i class="fa fa-trash-o">delete</i>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+ <div class="container" style="text-align:center;">
+        <app-footer></app-footer>
+    </div>
+
